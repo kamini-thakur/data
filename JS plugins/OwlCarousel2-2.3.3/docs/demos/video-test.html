@@ -1,0 +1,136 @@
+<div id="shopify-section-home_page_video" class="shopify-section index-section"><div class="home_video_list">
+  <div class="container"> 
+     {% if section.settings.title != blank %}
+    <div class="section-title-wrapper">
+        <h2 class="section-title-head section-title-header-font">{{ section.settings.title  }}</h2>
+    </div>  
+     {% endif %}
+    
+      
+    <ul class="video_list" >
+      {% for i in (1..8) %}
+      {% capture item_name %}subheading_{{ i }}{% endcapture %}
+       {% capture content %}youtube_html_{{ i }}{% endcapture %}
+     
+       {% if section.settings[item_name] != blank %}
+      <h2> {{section.settings[item_name] }}</h2>
+      {% endif %}
+      
+      <li class="home_page_video_list">
+       {% if section.settings[content] != blank %}
+       <h2> {{section.settings[content] }}</h2>
+   {% endif %}
+         </li> 
+       {% endfor %}
+          </ul>
+  
+  </div>
+</div>
+
+
+</div>
+
+{% schema %}
+{
+"name": "Home-page-videos",
+"class": "index-section",
+
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": "Heading"
+
+},
+{
+"type": "text",
+"id": "subheading_1",
+"label": "Sub Heading"
+
+},
+
+{
+"type": "html",
+"id": "youtube_html_1",
+"label": "You Tube"
+},
+{
+"type": "text",
+"id": "subheading_2",
+"label": "Sub Heading"
+
+},
+{
+"type": "html",
+"id": "youtube_html_2",
+"label": "You Tube"
+},
+{
+"type": "text",
+"id": "subheading_3",
+"label": "Sub Heading"
+
+},
+{
+"type": "html",
+"id": "youtube_html_3",
+"label": "You Tube"
+},
+{
+"type": "text",
+"id": "subheading_4",
+"label": "Sub Heading"
+
+},
+{
+"type": "html",
+"id": "youtube_html_4",
+"label": "You Tube"
+},
+{
+"type": "text",
+"id": "subheading_5",
+"label": "Sub Heading"
+
+},
+{
+"type": "html",
+"id": "youtube_html_5",
+"label": "You Tube"
+},
+{
+"type": "text",
+"id": "subheading_6",
+"label": "Sub Heading"
+
+},
+{
+"type": "html",
+"id": "youtube_html_6",
+"label": "You Tube"
+},
+{
+"type": "text",
+"id": "subheading_7",
+"label": "Sub Heading"
+
+},
+{
+"type": "html",
+"id": "youtube_html_7",
+"label": "You Tube"
+},
+{
+"type": "text",
+"id": "subheading_8",
+"label": "Sub Heading"
+
+},
+{
+"type": "html",
+"id": "youtube_html_8",
+"label": "You Tube"
+}
+]
+}
+{% endschema %}
