@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<style type="text/css">
+
+.red{
+  color:red;
+  font-size:25px;
+}
+.day{
+  color:black;
+  font-size:25px;
+}
+.hour{
+  color:brown;
+  font-size:25px;
+}
+.min{
+  color:blue;
+  font-size:25px;
+}
+.sec{
+  color:green;
+  font-size:25px;
+}
+</style>
+<script>
+
+window.onload = function(){
+     // var day = 0; 
+     // var hour = 0; 
+     // var min = 0;
+     
+
+var s=86200;
+
+
+
+m       = s / 60; 
+sec = Math.floor(s % 60); 
+
+h       = m / 60; 
+min = Math.floor(m % 60); 
+
+day    = Math.floor(h / 24); 
+hour   = Math.floor(h % 24); 
+
+
+ alert(day+"day"+hour+"hour"+min+"min"+sec+"secs")
+
+
+
+
+
+// var seconds = 86200;
+
+
+     
+// var day = Math.floor(seconds / 86400);
+// alert(day);
+// //alert(numdays);
+// var hour =Math.floor((seconds % 86400) / 3600);
+// //alert(numhours);
+// var min =Math.floor(((seconds % 86400) % 3600)/60);
+// //alert(numminutes);
+// var sec = Math.floor(((seconds % 86400) % 3600) % 60);
+
+// alert(day+"day"+hour+"hour"+min+"min"+sec+"sec");
+
+
+    
+     t=setInterval(function(){
+
+      if(hour==0 && day == 0)
+      {
+          document.getElementById("timer").innerHTML = 
+       '<span class="red">'+day+'days</span>:<span class="red">'+hour+'hours</span>:<span class="red">'+min+'mins</span>:<span class="red">'+sec+'secs</span>';
+      }
+      else
+      {
+       document.getElementById("timer").innerHTML = 
+       '<span class="day">'+day+'days</span>:<span class="hour">'+hour+'hours</span>:<span class="min">'+min+'mins</span>:<span class="sec">'+sec+'secs</span>';
+      }
+
+       if(day == 0 && hour == 0 && min==0 && sec == 0)
+       {
+            clearInterval(t);
+            alert("Your time finish now");
+       }
+
+       // if(sec == 0)
+       // {
+       //    if(day != 0 && hour == 0)
+       //    {
+       //        day--;
+       //        hour=23;
+       //        //min=60;
+       //        sec=60;
+       //    }
+       //    else if(hour != 0 && min==0)
+       //    {
+       //        hour--;
+       //        min=59;
+       //        sec=60; //running
+       //    }
+          
+       //   else if(min != 0 && hour == 0)
+       //   {
+       //     min--; 
+       //     sec = 60;  //running
+
+       //   }
+       //   else if(min != 0 && hour != 0)
+       //   {  
+       //     min--;
+       //     sec = 60;
+       //   }
+         
+       // }
+       if(sec==0)
+       {
+         if(day!=0 && hour==0 && min==0)
+         {
+            day--;
+            hour=24;
+         }
+         if(hour!=0 && min==0)
+         {
+            hour--;
+            min=60;
+         }
+         if(min!=0 && sec==0)
+         {
+            min--;
+            sec=60;
+         }
+       }
+       sec--;
+      },400);
+    }
+
+
+
+</script>
+
+
+
+
+
+</head>
+<body>
+
+<h4>day:hour:min:sec</h4>
+<span id="timer">00:00:00:00<span> 
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script>
+// Switching handlers using the `.one()` method
+/*
+$( "p" ).one( "click", firstClick );
+ 
+function firstClick() {
+    console.log( "You just clicked this for the first time!" );
+ 
+    // Now set up the new handler for subsequent clicks;
+    // omit this step if no further click responses are needed
+    $( this ).click( function() { console.log( "You have clicked this before!" ); } );
+}
+*/
+
+/* array through for loop */
+
+$(document).ready(function(){
+$(function () {
+    var myArray = ["apple", "banana", "tree", "four", "five"];
+    $.each(myArray, function (key, value) {
+        console.log(value);
+    });
+    /*
+    var cur_el;
+    $(myArray).each(function(){
+    		cur_el = $(this);
+    		alert(cur_el);
+    }); */
+
+});
+});
+
+
+//Loop through all links on the page
+/*
+$(function () {
+        $('a').each(function(){
+        //Disable the link
+        $(this).prop("href", "#");
+});
+});
+*/
+
+/*
+$( "input[type='text']" ).change(function() {
+  // Check input( $( this ).val() ) for validity here
+});
+*/
+
+</script>
+
+
+
+
+
+

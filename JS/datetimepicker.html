@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen"
+     href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
+    <script type="text/javascript"
+     src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+    </script> 
+    <script type="text/javascript"
+     src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js">
+    </script>
+    <script type="text/javascript"
+     src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.min.js">
+    </script>
+    <script type="text/javascript"
+     src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.pt-BR.js">
+    </script>
+    <style type="text/css">
+
+.red{
+  color:red;
+  font-size:25px;
+}
+.days{
+  color:black;
+  font-size:25px;
+}
+.hours{
+  color:brown;
+  font-size:25px;
+}
+.mins{
+  color:blue;
+  font-size:25px;
+}
+.secs{
+  color:green;
+  font-size:25px;
+}
+
+
+</style>
+    <script type="text/javascript">
+  $(document).ready(function(){
+    $('#datetimepicker').datetimepicker({
+        format: 'MM/dd/yyyy hh:mm:ss',
+        language: 'en',
+        //pick12HourFormat: true
+      });
+       $('#show').click(function(){
+        var datetimevalue = $('#datetime').val();
+        alert(datetimevalue);
+        var selected = new Date(datetimevalue);
+         alert(selected.getDate());
+          var today=new Date(); 
+         //var date=datetimevalue.getHours();
+         //alert(date);
+         if( selected < today )
+         {
+            alert("You can't select past date");
+         }
+         else
+         {
+         var oneday=24*60*60*1000;
+         var day=Math.round(Math.abs(selected.getTime() - today.getTime())/oneday);
+         //alert(day);
+         var hour=Math.abs(selected.getHours()-today.getHours());
+         var min=Math.abs(selected.getMinutes()-today.getMinutes());
+         var sec=Math.abs(selected.getSeconds()-today.getSeconds());
+         t=setInterval(function(){
+            document.getElementById("timer").innerHTML='<span class="days">'+day+'days</span>:<span class="hours">'+hour+'hours</span>:<span class="mins">'+min+'minutes</span>:<span class="secs">'+sec+'seconds</span>';
+            if(day==0 && hour==0 && min==0 && sec==0)
+            {
+              clearInterval(t);
+              alert("your time finish now");
+            }
+            if(sec==0)
+            {
+              if(day!=0 && hour==0 && min==0)
+              {
+                day--;
+                hour=24;
+              }
+              if(hour!=0 && min==0)
+              {
+                hour--;
+                min=60;
+              }
+              if(min!=0 && sec==0)
+              {
+                min--;
+                sec=60;
+              }
+            }
+            sec--;
+         },1000)
+       }
+       });
+  });
+
+</script>
+
+
+  </head>
+  <body>
+  <span id="timer">00:00:00:00<span> 
+<h3>Select Date and Time:</h3>
+    <div id="datetimepicker" class="input-append date">
+      <input type="text" id="datetime"></input>
+      <span class="add-on">
+        <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
+      </span>
+    </div>
+   <button id="show">show</button>  
+  </body>
+<html>

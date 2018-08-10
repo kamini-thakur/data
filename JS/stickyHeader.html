@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<style>
+
+header{
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  font-size: 72px;
+  line-height: 108px;
+  height: 108px;
+  background: #335C7D;
+  color: #fff;
+  font-family: 'PT Sans', sans-serif;
+  transition: all 0.4s ease;
+}
+
+header.sticky {
+  font-size: 24px;
+  line-height: 48px;
+  height: 48px;
+  background: #efc47D;
+  text-align: left;
+  padding-left: 20px;
+}
+</style>
+</head>
+<body>
+
+<header><h1>Sticky Header</h1></header>
+<!-- <img src="Type_LitesOld.jpg" width="100%" height="1000px" alt="Big Image" /> -->
+<div style="background-color: yellow; height: 1000px; width: 100%;">
+</div>
+
+</body>
+</html>
+
+
+<script type="text/javascript">
+	
+$(window).scroll(function() {
+if ($(this).scrollTop() > 1){  
+    $('header').addClass("sticky");
+  }
+  else{
+    $('header').removeClass("sticky");
+  }
+});
+
+</script>
+
+
+=====================================
+
+<?php
+
+require_once 'header.php';
+
+require_once 'shopify.php';
+
+require_once 'keys.php';
+
+$_DOMAIN   = $_SESSION['shop'];
+
+if(empty($_DOMAIN))
+{
+  header('Location: login.php');
+}
+require_once 'wp-login.php';
+
+require_once 'api_details_form.php';
+
+$sc                  = new ShopifyClient($_SESSION['shop'], $_SESSION['token'], $api_key, $secret);
+$_SHOP_DETAILS       = $sc->call('GET', '/admin/themes.json?role=main');
+$_THEME_ID           = $_SHOP_DETAILS[0]['id'];
+$_SESSION['themeId'] = $_THEME_ID;
+//////GET /admin/shop.json
+
+require_once 'footer.php';
+
+?>
+
+<script type="text/javascript">
+
+/* Login form goes here */
+	function postForm(url,isForm)
+	{
+		 alert(isForm);
+	  	var signUpForm = jQuery('.'+isForm);
+	    signUpForm.submit(function(e){
+	      alert('yes');
+	      e.preventDefault();
+	      alert(url);
+	      console.log('hello');
+	      var data = signUpForm.serialize();
+	      jQuery.ajax({
+	        method: "POST",
+	        url: url,
+	        data: data,
+	      }).done(function( msg ) {
+	      	jQuery('.wishpondLoginFrm').css('display','none');
+	        jQuery('.wishpondTrackForm').css('display','block');
+
+	      });
+	    });
+	}
+
+</script>
+
+===========================================================
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta charset="utf-8">
+  <meta content="user-scalable=no, width=device-width, maximum-scale=1.0" name="viewport">
+  <title>Wishpond Sign Up</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://wishpondapps.com/assets/css/style.css">
+</head>
+<body>
+  <div class="container wishpondLoginFrm">
+    <div class="row">
+      <div class="col-sm-12">
+        <form accept-charset="UTF-8" action="https://www.wishpond.com/central/merchant_signups?redirect_to=https%3A%2F%2Fwww.wishpondapps.com%2Flogin.php" class="new_user signUpForm" id="new_user" method="post">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address:</label>
+            <input aria-describedby="email_help_block" class="form-control" id="user_email" name="user[email]" size="30" type="email">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password:</label>
+            <input aria-describedby="password_help_block" autocomplete="false" class="form-control" id="user_password" name="user[password]" size="30" type="password">
+          </div>
+          <button name="commit" type="submit" class="btn btn-default" onsubmit="return postForm('https://www.wishpond.com/central/merchant_signups?redirect_to=https%3A%2F%2Fwww.wishpondapps.com%2Flogin.php','signUpForm');">Sign Up Free</button>
+        </form>
+      </div>
+      <div class="col-sm-12">
+        <p class="text-center card_footer_text">Already have an account? <strong><a href="/wp-login.php?plain=false">Login</a></strong></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+============================================
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta charset="utf-8">
+  <meta content="user-scalable=no, width=device-width, maximum-scale=1.0" name="viewport">
+  <title>Wishpond Sign Up</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://wishpondapps.com/assets/css/style.css">
+</head>
+<body>
+  <div class="container wishpondLoginFrm">
+    <div class="row">
+      <div class="col-sm-12">
+        <form accept-charset="UTF-8" action="" class="new_user loginForm" id="new_user" method="post">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address:</label>
+            <input aria-describedby="email_help_block" class="form-control" id="user_email" name="user[email]" size="30" type="email">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password:</label>
+            <input aria-describedby="password_help_block" autocomplete="false" class="form-control" id="user_password" name="user[password]" size="30" type="password">
+          </div>
+          <button name="commit" type="submit" class="btn btn-default" onclick="return postForm('https://www.wishpond.com/session?redirect_to=https%3A%2F%2Fwww.wishpondapps.com%2Flogin.php','loginForm');">Sign Up Free</button>
+        </form>
+      </div>
+      <div class="col-sm-12">
+        <p class="text-center card_footer_text">Don't have an account? <strong><a href="/wp-signup.php">Start Free Trial</a>.</strong></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+==================================================
+
+/* To hide and display tabs code */
+  $('#tab1').click(function(e){
+  	$('#textOnly').css('display','block');
+    $('#textImages').css('display','none');
+    $('#ImgUpload').css('display','none');
+  });
+  $('#tab2').click(function(e){
+  	$('#textOnly').css('display','none');
+    $('#textImages').css('display','block');
+    $('#ImgUpload').css('display','none');
+    $('.CasebackImage').css('display','none');
+    $('.CasebackNewImage').css('display','block');
+  });
+  $('#tab3').click(function(e){
+  	$('#textOnly').css('display','none');
+    $('#textImages').css('display','none');
+    $('#ImgUpload').css('display','block');
+  });
+
+  ===============================================
+
+   $('#LogoCat').change(function(){
+    var category = $( "#LogoCat option:selected" ).val();
+	console.log(category);
+    if(category == 'cat_1')
+    {
+      $('.popup_type_text4').addClass('TextAbove');
+       $('.hideCulture').css('display','block');
+       $('.popup_type_text4').css('display','block');
+      
+    }
+    else
+    {
+      $('.hideCulture').css('display','none');
+      $('.popup_type_text4').css('display','none');
+    }
+    $('[id^=cat]').hide();
+    $('#'+category).css('display','block');
+    $("[id^=cat] input:radio[name=radioName]").removeAttr('checked', false);
+    $('#'+category+" input:radio[name=radioName]:first").attr('checked', true);
+    $("[id^=cat] input:radio[name=radioName]").removeClass('selectedRadio');
+    $('#'+category+" input:radio[name=radioName]:first").addClass('selectedRadio');
+    var imgValue = $('.selectedRadio').val();
+    $("#getLogoImg").html(imgValue);
+    $('.selectedRadio').next("span").addClass('pickImg');
+  });
+
+  $('.openPage').click(function(e){
+  		var whichPage = $(this).attr('data-which-page');
+  		$('[id^=cat]').hide();
+  		$('#'+whichPage).css('display','block');
+
+  })
+
+  $('.wistia_responsive_padding').click(function(e){
+  		var getVideo = $(this).html();
+  		$('.mainMicroscope').html(getVideo);
+  })
+
+  mainMicroscope
+
+  $('.prodVariant').click(function(e){
+  		var variantImg = $(this).attr('src');
+  		$('.mainProdImage').attr('src',variantImg);
+  })

@@ -1,0 +1,79 @@
+<html>
+<head>
+	<title>to-do list</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+		var add_data=[];
+		function show()
+		{
+			var msg=document.getElementById("get").value;
+			//alert(msg);
+			//localStorage.setItem(msg);
+			
+			//document.getElementById("insert").innerHTML += "<br>"+msg;
+			// var message += "<br>"+msg;
+			// alert(message);
+			//var data=document.getElementById("insert").innerHTML=message;
+			 // for(var i=0; i < localStorage.length; i++)
+			 // {
+			 	// for(var i=0; i < add_data.length; i++)
+			 	// {
+			 	// 	add_data.push(msg);
+			 	// 	var url=localStorage.key(i);
+			 	// 	document.getElementById("insert").innerHTML=url;
+				var data =document.getElementById("insert").innerHTML += "<li id='remo'>"+msg+"<span class='glyphicon glyphicon-remove' onclick='remove()'></li>";
+				//var url=localStorage.key(i);
+				localStorage.setItem('mssg',data);
+			//}
+				//}
+			
+		}
+		function remove()
+			{
+				alert("kamini");
+				var rem_item = document.getElementById("remo");
+				// this.rem_item=rem_item;
+				// rem_item.outerHTML="";
+			 	//delete rem_item;
+				//localStorage.setItem('rem',rem_item);
+				//this.url=address;
+				//var addr=document.getElementsByTagName("span").getAttribute("address"); 
+				//localStorage.removeItem('mssg');
+			}
+		
+		
+		window.onload= function()
+		{
+			//localStorage.removeItem('mssg');
+			//localStorage.removeItem(address);
+			// for(var i=0; i < localStorage.length; i++)
+			// {
+				//var url=localstorage.key();
+				var stored=localStorage.getItem('mssg');
+			//}
+			document.getElementById("insert").innerHTML =  stored;
+		}
+
+	</script>
+</head>
+
+<body>
+<ol><p id="insert"></p></ol>
+
+
+<input type="text" id="get">
+<button type="submit" id="send" onclick="show();">Submit</button>
+
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<script type="text/javascript">
+
+function validate()
+{
+	var name=document.getElementById("name").value;
+	var name_reg=/^[a-z,A-Z]+$/
+
+	var email=document.getElementById("email").value;
+	var email_reg=/^[a-z,A-Z,0-9,.,_,#,-]+[@][a-z,A-Z,0-9]+[.][a-z,A-Z]+$/
+
+	var pwd=document.getElementById("pwd").value;
+	//var pwd_reg=/^[a-z,A-Z,0-9,.,_,#,-]+$/
+
+	var cpwd=document.getElementById("cpwd").value;
+
+	var mobile=document.getElementById("mobile").value;
+	var mobile_reg=/^[0-9]+$/
+
+	var msg=document.getElementById("msg");
+
+	if(name == "")
+	{
+		msg.innerHTML="Please enter name";
+		return false;
+	}
+	else if(!name.match(name_reg))
+	{
+		msg.innerHTML="Please enter valid name";
+		return false;
+	}
+	else if(email=="")
+	{
+		msg.innerHTML="Please enter email";
+		return false;
+	}
+	else if(!email.match(email_reg))
+	{
+		msg.innerHTML="Please enter valid email";
+		return false;
+	}
+	else if(pwd=="")
+	{
+		msg.innerHTML="Please enter password";
+		return false;
+	}
+	else if(cpwd=="")
+	{
+		msg.innerHTML="Please enter confirm password";
+		return false;
+	}
+	else if(!pwd.match(cpwd))
+	{
+		msg.innerHTML="Password does not match";
+		return false;
+	}
+	else if(mobile=="")
+	{
+		msg.innerHTML="Please enter mobile number";
+		return false;
+	}
+	else if(!mobile.match(mobile_reg))
+	{
+		msg.innerHTML="please enter digits only";
+		return false;
+	}
+	else if(mobile.length != 10)
+	{
+		msg.innerHTML="please enter 10-digits number only";
+		return false;
+	}
+	else
+	{
+		msg.innerHTML="Sign-up successful";	
+	}
+}
+
+</script>
+
+
+<span id="msg" style="color:red; margin-left:200px;"></span>
+<form onsubmit="return validate();">
+
+Name<input type="text" name="name" id="name"><br><br>
+Email<input type="text" name="email" id="email" ><br><br>
+Password<input type="password" name="pwd" id="pwd" ><br><br>
+Confirm password<input type="password" name="cpwd" id="cpwd" ><br><br>
+Mobile<input type="text" name="mobile" id="mobile" ><br><br>
+<input type="submit" name="submit" id="submit" value="submit">
+</form>

@@ -1,0 +1,75 @@
+<html>
+<head>
+	<title>chatbox</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+
+//setInterval(show,2500);
+		
+		// function show()
+		// {
+		// 	var msg=document.getElementById("get").value;
+		// 	var data =document.getElementById("insert").innerHTML += "<li>"+msg+"<br>";
+		// }
+		$(document).ready(function(){
+			$("#send").click(function(){
+				//event.preventDefault();
+				var msg=$("#get").val();
+				var data = msg+"<br>";
+				$("#insert").append(data);
+				
+				//alert(msg);
+				$.ajax({
+				method: "POST",
+				url: "realchatbox.html",
+				data: {'message': data }, 
+				//cache: false,
+				success: function(response){		
+					//$("#insert").html(data); //Insert chat log into the #chatbox div
+					alert(response);				
+			  	}
+				});
+			});
+
+		});
+		
+
+		
+	</script>
+</head>
+
+<body>
+
+
+<table align="center" style="margin-top:50px;" border="1">
+<tr><th style="background-color: green;"><h4>Chatbox</th></h4></tr>
+<tr><td>
+<p id="insert" style="height: 200px;"></p>
+</td></tr>
+<!-- <div id="insert" style="background-color: yellow; height:300px; width:300px;"> -->
+
+<!-- </div> -->
+<!-- <div id="insertagain" style="background-color: blue; height:300px; width:300px;">
+
+</div> -->
+<tr><td>
+
+<input type="text" id="get">
+<button type="submit" id="send">Submit</button>
+
+</td>
+</tr>
+
+
+</body>
+</html>

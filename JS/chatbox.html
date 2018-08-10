@@ -1,0 +1,96 @@
+<html>
+<head>
+	<title>to-do list</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+		var add_data=[];
+		function show()
+		{
+			var msg=document.getElementById("get").value;
+			
+			
+				var data =document.getElementById("insert").innerHTML += "<li>"+msg+"<br>";
+		
+		}
+		function showagain()
+		{
+			var msg2=document.getElementById("getagain").value;
+			var data =document.getElementById("insert").innerHTML += "=>"+msg2+"<br>";			
+		}
+	</script>
+</head>
+
+<body>
+
+<table align="center" style="margin-top:50px;" border="1">
+<tr><th style="background-color: green;"><h4>Chatbox</th></h4></tr>
+<tr><td>
+<p id="insert" style="height: 200px;"></p>
+</td></tr>
+<!-- <div id="insert" style="background-color: yellow; height:300px; width:300px;"> -->
+
+<!-- </div> -->
+<!-- <div id="insertagain" style="background-color: blue; height:300px; width:300px;">
+
+</div> -->
+<tr><td>
+<input type="text" id="get">
+<button type="submit" id="send" onclick="show();">Submit</button>
+</td>
+</tr>
+<tr>
+<td>
+<input type="text" id="getagain">
+<button type="submit" id="sendagain" onclick="showagain();">Submit</button>
+</td>
+</tr>
+
+</body>
+</html>  black&white-(15).jpg
+hello@lemotdesign.com.au  nehaisawesome
+{% assign prod_quant = 0 %}
+                  {% for i in (1..200) %}
+                  {% if forloop.first %}
+                  	{% assign prod_quant = 1 %}
+                  	<option value="{{ prod_quant }}">{{ prod_quant  }}m</option>
+                  	{% assign prod_quant = 2 %}
+                  {% else %}
+                  {% assign prod_quant = prod_quant | plus: 1 %}
+                  {% assign prod_quant_length = prod_quant | divided_by: 2.0 %}
+                  <option value="{{ forloop.index }}">{{ prod_quant_length  }}m</option>
+                  {% endif %}
+                {% endfor %}
+
+                =================
+
+Macronutrient Intake
+Number.prototype.between = function(first,last){
+    return (first < last ? this >= first && this <= last : this >= last && this <= first);
+}
+
+//var points = new Array(40, 100, 1, 5, 25, 10);
+var points = ['100-300','301-500', '501-700'];
+var price = 200;
+
+for (i = 0; i < points.length; i++) {
+var price1 = points[i];
+var splitted = price1.split("-");
+
+if(price.between(splitted[0],splitted[1])){ //returns true
+  document.getElementById("demo").innerHTML = points[0];
+  document.getElementById("result").innerHTML=price+' lies in this range';
+}else{
+	document.getElementById("demo").innerHTML='false';
+  document.getElementById("result").innerHTML=price1;
+}
+}

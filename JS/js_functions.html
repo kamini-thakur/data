@@ -1,0 +1,62 @@
+<html>
+<head>
+
+
+
+</head>
+<body>
+<p id="demo"></p>
+<button type="submit" onclick="sorting();" > click to sort </button>
+<script>
+var num=['kamini','thakur','parul','ishita','ankush','neha'];
+var points=['60','30','50','40'];
+var num2=['apple','mango','banana'];
+
+var person=[{name:"kamini",age:23},{name:"ishita",age:24},{name:"parul",age:22}];
+display();
+function display()
+{	
+	document.getElementById("demo").innerHTML=
+	person[0].name+""+person[0].age+"<br>"+person[1].name+""+person[1].age+"<br>"+person[2].name+""+person[2].age+"<br>";
+}
+function sorting()
+{
+	person.sort(function(a,b){ return a.age - b.age });
+	display();
+}
+
+
+// for(var i=0; i<num.length; i++ )
+// {
+// 	document.write("num["+i+"]="+num[i]);
+// 	document.write("<br>");
+// }	
+//document.write(num);
+//document.getElementById("demo").innerHTML=num.join('*');
+//var len=num.push('ishi');
+//var len=num.pop();
+//var len=num.shift();
+//var len=num.unshift('himanshu');
+//num[0]='kiwi';			//Changes the first element of fruits to "Kiwi"
+//var leng=num.length;
+//document.write(leng);
+//num[num.length]='apple';
+//var del=delete num[0];
+//document.write(del);
+//var splice=num.splice(2,1,'ankush','neha');
+//num.splice(0,2);
+//var newarray=num.concat(num1,num2);
+//document.getElementById("demo").innerHTML=newarray;
+//var sliced_array=num.slice(1,3);
+//points.sort(function(a,b){ return a-b });
+//num.reverse();
+
+//document.getElementById("demo").innerHTML=num.join('*');
+//document.getElementById("demo").innerHTML= points;
+//document.write(len);
+
+
+</script>
+
+</body>
+</html>

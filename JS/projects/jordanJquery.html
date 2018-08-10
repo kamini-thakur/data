@@ -1,0 +1,21 @@
+ 
+ /* code for meal-packages to set the max height of div section on jordan project */
+  
+  $(document).ready(function(){
+   
+    var highest=null;
+    var next=0;
+    
+     $(".meal_img").each(function(){
+  		var height = $(this).height();
+       	if(height > next){
+           next = height;
+           highest = next;  
+        } 
+     });
+     
+     $(".meal_img").each(function(e){
+       $(this).height(highest+"px");
+     });
+});
+    

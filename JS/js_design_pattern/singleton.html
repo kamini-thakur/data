@@ -1,0 +1,46 @@
+<form>
+<input type="text" id="enter" >
+<button id="sub" type="submit">Submit</button>
+</form>
+
+<script>
+
+document.getElementById('sub').addEventListner('click',Singleton);
+var Singleton=(function(){
+
+	var instance;
+	var salary=document.getElementById("enter").value;
+	//alert(salary);
+
+	function createInstance()
+	{
+		var annualsal=salary*12;
+		//return annualsal;
+		return{
+			annualsalary: function() {
+	        	return annualsal;
+	      	}
+      	};
+	}
+	return{
+		getInstance : function () {
+                if (!instance) {
+                    instance = createInstance();
+                }
+                return instance;
+            }
+	};
+})();
+
+var obj=Singleton.getInstance();
+alert(obj.annualsalary());
+
+//simple
+
+// function calc()
+// {
+// 	var salary=document.getElementById("enter").value;
+// 	var annualsal=salary*12;
+// 	alert(annualsal);
+// }
+</script>

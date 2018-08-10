@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<head>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>javascript timer</title>
+  
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  
+<style type="text/css">
+
+.red{
+  color:red;
+  font-size:25px;
+}
+.day{
+  color:black;
+  font-size:25px;
+}
+.hour{
+  color:brown;
+  font-size:25px;
+}
+.min{
+  color:blue;
+  font-size:25px;
+}
+.sec{
+  color:green;
+  font-size:25px;
+}
+</style>
+<script>
+// function compare()
+// {
+// // var d=new Date();
+// // document.getElementById("timer").innerHTML = d.toLocaleTimeString();
+// var defined=document.getElementById("selectdate").value;
+//      alert(defined);
+// }
+
+window.onload = function(){
+     var defined = new Date('9/3/2016,09:30:40');
+     var today=new Date();
+     // var now=today.toLocaleTimeString();
+     // var t=defined.getDate()-now.getDate();
+      // var date=defined.getDate();
+      // var hour=defined.getHours();
+      // var min=defined.getMinutes();
+      // var sec=defined.getSeconds();
+
+      var day=defined.getDate() - today.getDate();
+      var hour=defined.getHours() - today.getHours();
+      var min=defined.getMinutes() - today.getMinutes();
+      var sec=defined.getSeconds() - today.getSeconds();
+      //alert(sec);
+
+     t=setInterval(function(){
+       document.getElementById("timer").innerHTML = 
+       '<span class="day">'+day+'days</span>:<span class="hour">'+hour+'hours</span>:<span class="min">'+min+'minutes</span>:<span class="sec">'+sec+'seconds</span>';
+       if(day == 0 && hour == 0 && min==0 && sec == 0)
+       {
+            clearInterval(t);
+            alert("Your time finish now");
+       }
+       if(sec==0)
+       {
+         if(day!=0 && hour==0 && min==0)
+         {
+            day--;
+            hour=24;
+         }
+         if(hour!=0 && min==0)
+         {
+            hour--;
+            min=60;
+         }
+         if(min!=0 && sec==0)
+         {
+            min--;
+            sec=60;
+         }
+       }
+       sec--;
+     },1000);
+    }
+</script>
+</head>
+<body>
+
+
+<span id="timer">00:00:00:00<span> 
+<h3>Select Date:</h3>
+<input type="text" id="selectdate">
+
+<button id="show">show</button> 
+
+
+
+</body>
+</html>

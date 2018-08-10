@@ -1,0 +1,37 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+$(document).ready(function () {
+        window.addEventListener('load', OnStorage, false);
+
+    });
+
+    function OnStorage(event) {
+        if (window.localStorage) {
+            var key, value;
+            // loop through local storage
+            for (var i = 0; i < localStorage.length; i++) {
+                // retrieve the key
+                key = localStorage.key(i);
+                // set the field from the key
+                value = localStorage.getItem(key);
+
+                $("#medListDiv").show();
+                var text = '<a href="#"><h2>' + value + '</h2>' + '<a href="#" class="del">Delete</a></a>';
+                $('<li />', {
+                html: text
+                }).appendTo('ul.medList');                  
+            }
+            $('ul.medList').listview('refresh');
+        }
+    }
+
+    //Deletes items from the medicine List
+    $('ul').on('click', '.del', function (el) {
+        $(this).closest('li').remove();
+        localStorage.removeItem(key); //Where problem relies
+        $('ul.medList').listview('refresh');
+    });
+    </script>
+    <div id="medListDiv">
+
+    </div>

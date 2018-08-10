@@ -1,0 +1,88 @@
+<script type="text/javascript">
+/*
+function search()
+{
+	document.getElementById("name").style.borderColor= "red";
+	var getname=document.getElementById("name").value;
+	//document.write(getname);
+	var d = new Date();
+	var time_start = d.getMilliseconds(); 
+	var values=["ishitasood","kamini","rahul","rashi","shalini","tia","vihan"];
+
+	var beg=0;
+	var end=values.length-1;
+	//alert(end);
+	var mid=Math.round((beg+end)/2);
+	//alert(values[mid]);
+	//alert(mid);
+	while(beg <= end)
+	{
+		if(getname == values[mid])
+		{
+			var loc = mid;
+			//alert(loc);
+			break;
+		}
+		else
+		{
+			if( values[mid] < getname)
+			{
+				beg=mid+1;
+			}
+			else
+			{
+				end=mid-1;
+			}
+			mid=Math.round((beg+mid)/2);
+		}
+	}
+	if(loc > 0)
+	{
+		document.write("Element stored at location:"+loc);
+		//alert(loc);
+		var c = new Date();
+		var time_stop = c.getMilliseconds(); 
+		var time =time_stop - time_start;
+		document.write("Time taken to search:"+time);
+	}
+	else
+	{
+		document.write("element not found");
+	}
+}
+
+//action="{{ settings.mailchimp }}"
+// //casavva.us14.list-manage.com/subscribe/post?u=97c6b88a48fdc53b5cedd9dc4&amp;id=ef87ca67cb
+
+*/
+function create()
+{
+	//document.getElementById("name").style.borderColor="red";
+	var email=document.getElementById("name").value;
+	var email_reg=/^[a-z,A-Z,0-9,.,_,#,-]+[@][a-z,A-Z,0-9]+[.][a-z,A-Z]+$/
+	if(email.match(email_reg))
+	{
+		//alert("dfb");
+		document.getElementById("name").style.display="none";
+		document.getElementById("enter").innerHTML="Thank you";
+		alert("form submitted");
+	}
+	else
+	{
+		document.getElementById("name").style.borderColor="red";	
+		return false;
+	}
+
+}
+
+
+</script>
+
+<form onsubmit="return create();">
+<div id="enter">
+<input type="text" name="name" id="name">
+</div>
+</form>
+
+
+

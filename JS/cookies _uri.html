@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="jscookie.js"></script>
+        <style>
+            label
+            {
+                display:inline-block;
+                width:100px;
+                text-align:right;
+            }
+        </style>
+    </head>
+    <body onload="checkCookie();disPlayAllCookies();">
+     
+        <div id='welcome-msg'></div>
+        <div name="cookieForm" id="cookieForm">
+            <label>Cookie Name</label><input id="cname" type="text"/><br>
+            <label>Cookie Value</label><input id="cvalue" type="text"/><br>
+            <label>Expiraton days</label><input id="exdays"type="number" min="1"/><br>
+            <button id="createBtn" onClick="setACookie();">Create Cookie</button>
+            <button id="deleteBtn" onClick="deleteACookie();">Delete Cookie</button>
+        </div>
+        <div id="cookies">
+            <h2>Cookies</h2>
+        </div>
+         
+    </body>
+</html>
