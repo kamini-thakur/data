@@ -1,0 +1,290 @@
+@charset="utf-8";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800');
+body{
+	margin: 0;
+	padding: 0 0 57px;
+	background: #fff;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	color: #222;
+}
+a,
+a:hover,
+a:focus {
+	text-decoration: none;
+}
+a{
+	color: #0760c9;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing:border-box;
+}
+ul,ol,li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+h1{
+	font-size: 36px;
+}
+h2{
+	font-size: 30px;
+}
+h3{
+	font-size: 24px;
+}
+h4{
+	font-size: 18px;
+}
+h5{
+	font-size: 16px;
+}
+.clearfix:after,
+.clearfix:before,
+.container:after,
+.container:before {
+	clear: both;
+	display: table;
+	content: "";
+}
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 15px;
+}
+.text-left{
+	text-align: left;
+}
+.text-right{
+	text-align: right;
+}
+.text-center{
+	text-align: center;
+}
+img{
+	display: block;
+	max-width: 100%;
+}
+
+
+/*
+========================================================================
+header style start here
+========================================================================
+*/
+header {
+  background: #104375 none repeat scroll 0 0;
+  text-align: center;
+}
+.header-inner {
+  color: #ffffff;
+  padding: 12px 0;
+}
+.header-inner .left-col {
+  float: left;
+  width: 20%;
+}
+.header-inner .center-col {
+  float: left;
+  width: 60%;
+  text-align: center;
+}
+.header-inner .right-col {
+  float: right;
+  width: 20%;
+}
+.header-inner h2 {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.4;
+}
+.header-inner a {
+  display: inline-block;
+}
+.header-inner a img {
+  max-width: 40px;
+}
+.header-inner h2 {
+  overflow: hidden;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+.header-inner a img {
+  max-width: 31px;
+}
+
+/*
+========================================================================
+follow sec style start here
+========================================================================
+*/
+.follow-section {
+  padding: 15px 0;
+}
+.follow-section .left-col {
+  float: left;
+  width: 30%;
+}
+.follow-section .right-col {
+  float: left;
+  padding: 0 0 0 20px;
+  width: 70%;
+}
+.follow-list ul li {
+  float: left;
+  width: 33.33%;
+  text-align: center;
+}
+.follow-list ul li p {
+  color: #89898b;
+}
+.profile-img > img {
+  margin: 0 auto;
+  max-width: 95px;
+  width: 100%;
+}
+.follow-btn a {
+  border: 1px solid #0760c9;
+  border-radius: 4px;
+  color: #0760c9;
+  display: block;
+  line-height: 1.2;
+  margin-top: 8px;
+  padding: 7px 10px;
+  text-align: center;
+  text-decoration: none;
+}
+.follow-btn a:hover{
+  background:#0760c9;
+  color:#fff;
+}
+
+
+/*
+========================================================================
+Tabs style start here
+========================================================================
+*/
+.dollarshave-tabs .tabs > li {
+  float: left;
+  text-align: center;
+  width: 25%;
+  border-right: 1px solid #d3d4d5;
+}
+.dollarshave-tabs .tabs > li:last-child {
+  border: 0px;
+}
+.dollarshave-tabs .tabs{
+	margin:0 -15px;
+}
+.dollarshave-tabs .tabs {
+  border-bottom: 1px solid #d3d4d5;
+  border-top: 1px solid #d3d4d5;
+  margin: 0 -15px;
+  padding: 15px 0;
+}
+.dollarshave-tabs {
+  margin-top: 15px;
+}
+.dollarshave-tabs .tabs > li a {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 25px auto;
+  display: block;
+  font-size: 0;
+  height: 32px;
+}
+.dollarshave-tabs .tabs > li.grid a{
+	background-image: url('../img/menu-icon.png');
+}
+.dollarshave-tabs .tabs > li.list a{
+	background-image: url('../img/menu2-icon.png');
+}
+.dollarshave-tabs .tabs > li.location a{
+	background-image: url('../img/location-icon.png');
+}
+.dollarshave-tabs .tabs > li.userinfo a {
+	background-image: url('../img/user-icon.png');
+	background-size: 30px auto;
+}
+.dollarshave-tabs .tabs > li.grid a:hover,
+.dollarshave-tabs .tabs > li.grid a.active {
+	background-image: url('../img/blue-menu-icon.png');
+}
+.dollarshave-tabs .tabs > li.list a:hover,
+.dollarshave-tabs .tabs > li.list a.active {
+	background-image: url('../img/blue-menu2-icon.png');
+}
+.dollarshave-tabs .tabs > li.location a:hover,
+.dollarshave-tabs .tabs > li.location a.active {
+	background-image: url('../img/blue-location-icon.png');
+}
+.dollarshave-tabs .tabs > li.userinfo a:hover,
+.dollarshave-tabs .tabs > li.userinfo a.active {
+	background-image: url('../img/blue-user-icon.png');
+}
+.image-list > li {
+  display: inline-block;
+  float: left;
+  padding: 5px;
+  width: 50%;
+}
+.image-list > li img {
+  width: 100%;
+}
+.image-list{
+	margin:0 -5px;
+}
+
+
+
+/*
+========================================================================
+Footer style start here
+========================================================================
+*/
+.footer-menu {
+  background: #1c1d1f none repeat scroll 0 0;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+}
+.footer-menu ul li {
+  display: inline-block;
+  float: left;
+  text-align: center;
+  width: 20%;
+}
+.footer-menu ul li a {
+  display: block;
+  line-height: 1;
+  padding: 12px 15px;
+}
+.footer-menu ul li.active a{
+	background-color: #104375;
+}
+.footer-menu ul li a img {
+  display: inline-block;
+  max-width: 30px;
+  width: 100%;
+}
+
+
+/*
+========================================================================
+Responsive style start here
+========================================================================
+*/
+
+@media (max-width: 375px) {
+.follow-list ul li p {
+  font-size: 12px;
+}
+}

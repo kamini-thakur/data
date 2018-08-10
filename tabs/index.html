@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Dollarshaveclub</title>
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <div class="header-inner clearfix">
+            <div class="left-col text-left">
+              <a href="#"><img src="img/left-arrow.png"></a>
+            </div>
+            <div class="center-col">
+              <h2>Dollarshaveclub</h2>
+            </div>
+            <div class="right-col text-right">
+              <a href="#"><img src="img/share-icon.png"></a>
+            </div>
+        </div>
+      </div>
+    </header> <!-- /. Header -->
+
+    <!-- Follow Section -->
+    <section class="follow-section">
+      <div class="container">
+        <div class="left-col">
+          <div class="profile-img">
+            <img src="img/profile-img.png">
+          </div>
+        </div>
+        <div class="right-col">
+          <div class="follow-list">
+            <ul class="clearfix">
+              <li>
+                <h5>230</h5>
+                <p>posts</p>
+              </li>
+              <li>
+                <h5>11.7k</h5>
+                <p>followers</p>
+              </li>
+              <li>
+                <h5>37</h5>
+                <p>following</p>
+              </li>
+            </ul>
+          </div>
+          <div class="follow-btn">
+            <a href="#"> <span>+</span> Follow</a>
+          </div>
+        </div>
+      </div>
+    </section><!-- /. Follow Section -->
+
+    <!-- Dollarshave Content -->
+    <section class="dollarshave-content">
+      <div class="container">
+        <h5>Dollar Shave Club</h5>
+        <p>Amazing razors and world class grooming products for just a few bucks. Try the Club. <a href="#">dlrshv.es/rzepBC</a></p>
+      </div>
+    </section><!-- /. Dollarshave Content -->
+
+    <!--  Tab Section -->
+    <section class="dollarshave-tabs">
+      <div class="container">
+        <ul class="tabs clearfix" data-tabgroup="first-tab-group">
+          <li class="grid"><a href="#tab1" class="active">Tab 1</a></li>
+          <li class="list"><a href="#tab2">Tab 2</a></li>
+          <li class="location"><a href="#tab3">Tab 3</a></li>
+          <li class="userinfo"><a href="#tab4">Tab 4</a></li>
+        </ul> 
+        <div id="first-tab-group" class="tabgroup">
+            <div id="tab1">
+              <ul class="image-list clearfix">
+                <li><img src="img/club-image1.jpg" alt="club images"></li>
+                <li><img src="img/club-image2.jpg" alt="club images"></li>
+                <li><img src="img/club-image3.jpg" alt="club images"></li>
+                <li><img src="img/club-image4.jpg" alt="club images"></li>
+                <li><img src="img/club-image5.jpg" alt="club images"></li>
+                <li><img src="img/club-image6.jpg" alt="club images"></li>
+              </ul>
+            </div>
+            <div id="tab2">
+              <ul class="image-list clearfix">
+                <li><img src="img/club-image6.jpg" alt="club images"></li>
+                <li><img src="img/club-image4.jpg" alt="club images"></li>
+                <li><img src="img/club-image5.jpg" alt="club images"></li>
+                <li><img src="img/club-image3.jpg" alt="club images"></li>
+                <li><img src="img/club-image4.jpg" alt="club images"></li>
+                <li><img src="img/club-image1.jpg" alt="club images"></li>
+              </ul>
+            </div>
+            <div id="tab3">
+              <ul class="image-list clearfix">
+                <li><img src="img/club-image5.jpg" alt="club images"></li>
+                <li><img src="img/club-image2.jpg" alt="club images"></li>
+                <li><img src="img/club-image3.jpg" alt="club images"></li>
+                <li><img src="img/club-image4.jpg" alt="club images"></li>
+                <li><img src="img/club-image1.jpg" alt="club images"></li>
+                <li><img src="img/club-image6.jpg" alt="club images"></li>
+              </ul>
+            </div>
+            <div id="tab4">
+              <ul class="image-list clearfix">
+                <li><img src="img/club-image4.jpg" alt="club images"></li>
+                <li><img src="img/club-image4.jpg" alt="club images"></li>
+                <li><img src="img/club-image5.jpg" alt="club images"></li>
+                <li><img src="img/club-image3.jpg" alt="club images"></li>
+                <li><img src="img/club-image1.jpg" alt="club images"></li>
+                <li><img src="img/club-image6.jpg" alt="club images"></li>
+              </ul>
+            </div>
+          </div>
+      </div>
+    </section><!-- /. Tab Section -->
+
+    <!-- Footer -->
+    <footer class="footer-menu">
+      <div class="container">
+          <ul class="clearfix">
+            <li class="home-nav"><a href="#"><img src="img/home.png"></a></li>
+            <li class="search-nav"><a href="#"><img src="img/search.png"></a></li>
+            <li class="insta-nav active"><a href="#"><img src="img/insta.png"></a></li>
+            <li class="love-nav"><a href="#"><img src="img/love-chat.png"></a></li>
+            <li class="user-nav"><a href="#"><img src="img/user.png"></a></li>
+          </ul>
+      </div>
+    </footer><!-- /. Footer -->
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- tabs js -->
+    <script type="text/javascript">
+      $('.tabgroup > div').hide();
+    $('.tabgroup > div:first-of-type').show();
+    $('.tabs a').click(function(e){
+      e.preventDefault();
+        var $this = $(this),
+            tabgroup = '#'+$this.parents('.tabs').data('tabgroup'),
+            others = $this.closest('li').siblings().children('a'),
+            target = $this.attr('href');
+        others.removeClass('active');
+        $this.addClass('active');
+        $(tabgroup).children('div').hide();
+        $(target).show();
+    })
+    </script>
+  </body>
+</html>

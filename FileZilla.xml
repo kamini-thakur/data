@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<FileZilla3>
+    <Servers>
+        <Server>
+            <Host>101.0.74.84</Host>
+            <Port>21</Port>
+            <Protocol>0</Protocol>
+            <Type>0</Type>
+            <User>lustfulpromo</User>
+            <Pass>{6E^KRtt=Xyzzv6D</Pass>
+            <Logontype>1</Logontype>
+            <TimezoneOffset>0</TimezoneOffset>
+            <PasvMode>MODE_DEFAULT</PasvMode>
+            <MaximumMultipleConnections>0</MaximumMultipleConnections>
+            <EncodingType>Auto</EncodingType>
+            <BypassProxy>0</BypassProxy>
+            <Name>New site</Name>
+            <Comments>Host: 101.0.74.84&#x0A;U: lustfulpromo&#x0A;P: {6E^KRtt=Xyzzv6D&#x0A;</Comments>
+            <LocalDir />
+            <RemoteDir />
+            <SyncBrowsing>0</SyncBrowsing>New site&#x0A;        
+        </Server>
+        <Server>
+            <Host>54.202.239.93</Host>
+            <Port>22</Port>
+            <Protocol>1</Protocol>
+            <Type>0</Type>
+            <User>maintuser</User>
+            <Pass />
+            <Logontype>1</Logontype>
+            <TimezoneOffset>0</TimezoneOffset>
+            <PasvMode>MODE_DEFAULT</PasvMode>
+            <MaximumMultipleConnections>0</MaximumMultipleConnections>
+            <EncodingType>Auto</EncodingType>
+            <BypassProxy>0</BypassProxy>
+            <Name>bumpshoe</Name>
+            <Comments>Public IP: 54.202.239.93&#x0A;FTP Login:-   ec2-54-202-239-93.us-west-2.compute.amazonaws.com&#x0A;User=maintuser</Comments>
+            <LocalDir />
+            <RemoteDir />
+            <SyncBrowsing>0</SyncBrowsing>bumpshoe&#x0A;        
+        </Server>
+        <Server>
+            <Host>138.68.72.167</Host>
+            <Port>22</Port>
+            <Protocol>1</Protocol>
+            <Type>0</Type>
+            <User>root</User>
+            <Pass>digitalocean1234</Pass>
+            <Logontype>1</Logontype>
+            <TimezoneOffset>0</TimezoneOffset>
+            <PasvMode>MODE_DEFAULT</PasvMode>
+            <MaximumMultipleConnections>0</MaximumMultipleConnections>
+            <EncodingType>Auto</EncodingType>
+            <BypassProxy>0</BypassProxy>
+            <Name>chris</Name>
+            <Comments>host: 138.68.72.167&#x0A;user: root&#x0A;pswd: digitalocean1234</Comments>
+            <LocalDir />
+            <RemoteDir />
+            <SyncBrowsing>0</SyncBrowsing>chris&#x0A;        
+        </Server>
+        <Server>
+            <Host>104.131.83.148</Host>
+            <Port>21</Port>
+            <Protocol>0</Protocol>
+            <Type>0</Type>
+            <User>amardeep</User>
+            <Pass>amardeep</Pass>
+            <Logontype>1</Logontype>
+            <TimezoneOffset>0</TimezoneOffset>
+            <PasvMode>MODE_DEFAULT</PasvMode>
+            <MaximumMultipleConnections>0</MaximumMultipleConnections>
+            <EncodingType>Auto</EncodingType>
+            <BypassProxy>0</BypassProxy>
+            <Name>esoft</Name>
+            <Comments>host:: 104.131.83.148&#x0A;Username:: amardeep&#x0A;password:: amardeep</Comments>
+            <LocalDir />
+            <RemoteDir />
+            <SyncBrowsing>0</SyncBrowsing>esoft&#x0A;        
+        </Server>
+        <Server>
+            <Host>www.arcadiashirt.com</Host>
+            <Port>21</Port>
+            <Protocol>0</Protocol>
+            <Type>0</Type>
+            <User>winads01</User>
+            <Pass>mCvSzGGY</Pass>
+            <Logontype>1</Logontype>
+            <TimezoneOffset>0</TimezoneOffset>
+            <PasvMode>MODE_DEFAULT</PasvMode>
+            <MaximumMultipleConnections>0</MaximumMultipleConnections>
+            <EncodingType>Auto</EncodingType>
+            <BypassProxy>0</BypassProxy>
+            <Name>fabio</Name>
+            <Comments>Host:  www.arcadiashirt.com&#x0A;Username: winads01&#x0A;Password: mCvSzGGY</Comments>
+            <LocalDir />
+            <RemoteDir />
+            <SyncBrowsing>0</SyncBrowsing>fabio&#x0A;        
+        </Server>
+        <Server>
+            <Host>ftp.dropshipcourses.com</Host>
+            <Port>21</Port>
+            <Protocol>0</Protocol>
+            <Type>0</Type>
+            <User>chaman@dropshipcourses.com</User>
+            <Logontype>2</Logontype>
+            <TimezoneOffset>0</TimezoneOffset>
+            <PasvMode>MODE_DEFAULT</PasvMode>
+            <MaximumMultipleConnections>0</MaximumMultipleConnections>
+            <EncodingType>Auto</EncodingType>
+            <BypassProxy>0</BypassProxy>
+            <Name>ftp.dropshipcourses.com</Name>
+            <Comments />
+            <LocalDir />
+            <RemoteDir />
+            <SyncBrowsing>0</SyncBrowsing>ftp.dropshipcourses.com&#x0A;        
+        </Server>
+        <Server>
+            <Host>ftp.dropshipcourses.com</Host>
+            <Port>21</Port>
+            <Protocol>0</Protocol>
+            <Type>0</Type>
+            <User>chaman@dropshipcourses.com</User>
+            <Pass>1V.n;V2|:y</Pass>
+            <Logontype>1</Logontype>
+            <TimezoneOffset>0</TimezoneOffset>
+            <PasvMode>MODE_DEFAULT</PasvMode>
+            <MaximumMultipleConnections>0</MaximumMultipleConnections>
+            <EncodingType>Auto</EncodingType>
+            <BypassProxy>0</BypassProxy>
+            <Name>voter</Name>
+            <Comments>FTP Username: chaman@dropshipcourses.com&#x0A;FTP Server: ftp.dropshipcourses.com&#x0A;FTP port: 21&#x0A;Password: 1V.n;V2|:y</Comments>
+            <LocalDir />
+            <RemoteDir />
+            <SyncBrowsing>0</SyncBrowsing>voter&#x0A;        
+        </Server>
+        <Server>
+            <Host>138.197.105.116</Host>
+            <Port>22</Port>
+            <Protocol>1</Protocol>
+            <Type>0</Type>
+            <User>partner</User>
+            <Pass>kWqP4jwcav</Pass>
+            <Logontype>1</Logontype>
+            <TimezoneOffset>0</TimezoneOffset>
+            <PasvMode>MODE_DEFAULT</PasvMode>
+            <MaximumMultipleConnections>0</MaximumMultipleConnections>
+            <EncodingType>Auto</EncodingType>
+            <BypassProxy>0</BypassProxy>
+            <Name>wishpond</Name>
+            <Comments>host: 138.197.105.116&#x0A;username: partner&#x0A;password: kWqP4jwcav</Comments>
+            <LocalDir />
+            <RemoteDir />
+            <SyncBrowsing>0</SyncBrowsing>wishpond&#x0A;        
+        </Server>
+        <Server>
+            <Host>45.55.204.30</Host>
+            <Port>22</Port>
+            <Protocol>1</Protocol>
+            <Type>0</Type>
+            <User>partner</User>
+            <Pass>wbrAqM5T^J!zGPpVB!WdyfN6&amp;vFSqDdmdNZ</Pass>
+            <Logontype>1</Logontype>
+            <TimezoneOffset>0</TimezoneOffset>
+            <PasvMode>MODE_DEFAULT</PasvMode>
+            <MaximumMultipleConnections>0</MaximumMultipleConnections>
+            <EncodingType>Auto</EncodingType>
+            <BypassProxy>0</BypassProxy>
+            <Name>wishpondNew</Name>
+            <Comments>host: 45.55.204.30&#x0A;username: partner&#x0A;password: wbrAqM5T^J!zGPpVB!WdyfN6&amp;vFSqDdmdNZ&#x0A;&#x0A;MySQL credentials&#x0D;&#x0A;User: partnerdb&#x0D;&#x0A;Password: $rTQ!jMV!SZZ^PKcMB*za5y*sC2rNPEvMmz&#x0D;&#x0A;</Comments>
+            <LocalDir />
+            <RemoteDir />
+            <SyncBrowsing>0</SyncBrowsing>wishpondNew&#x0A;        
+        </Server>
+    </Servers>
+</FileZilla3>
